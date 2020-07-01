@@ -7,6 +7,10 @@ variable "source_bucket_location" {
   type        = string
 }
 
+variable "resource_name_prefix" {
+  type = string
+}
+
 variable "function_name" {
   type = string
 }

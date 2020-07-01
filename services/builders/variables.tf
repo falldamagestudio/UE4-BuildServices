@@ -1,3 +1,7 @@
+variable "resource_name_prefix" {
+  type = string
+}
+
 variable "github_scope" {
   type = string
 }
@@ -20,6 +24,14 @@ variable "machine_type" {
 variable "boot_disk_size" {
   type    = number
   default = 200
+}
+
+variable "instance_name" {
+  type = string
+}
+
+variable "runner_name" {
+  type = string
 }
 
 variable "storage_bucket_id" {

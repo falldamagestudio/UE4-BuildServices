@@ -25,7 +25,7 @@ resource "google_cloudfunctions_function" "function" {
   depends_on = [google_project_iam_member.function_instance_admin_permissions]
 
   name                  = var.function_name
-  description           = "Watchdog"
+  description           = "${var.resource_name_prefix} Watchdog"
   runtime               = "go113"
   region                = var.function_region
   service_account_email = google_service_account.function_service_account.email
@@ -46,8 +46,8 @@ resource "google_cloudfunctions_function" "function" {
 
 # Create a service account. The cloud function will run in the context of this service account
 resource "google_service_account" "function_service_account" {
-  account_id   = "watchdog-service-account"
-  display_name = "Watchdog Service Account"
+  account_id   = "${var.resource_name_prefix}-watchdog"
+  display_name = "Service Account used to run the ${var.resource_name_prefix} watchdog Cloud Function"
 }
 
 # Grant the cloud function's service account permissions to control any Compute Engine instances within the project
@@ -59,8 +59,8 @@ resource "google_project_iam_member" "function_instance_admin_permissions" {
 
 # Create a service account. This account can be used to invoke the function via HTTP.
 resource "google_service_account" "invoke_function_service_account" {
-  account_id   = "invoke-watchdog"
-  display_name = "Service account used to invoke the watchdog via HTTP"
+  account_id   = "invoke-${var.resource_name_prefix}-watchdog"
+  display_name = "Service account used to invoke the ${var.resource_name_prefix} watchdog Cloud Function via HTTP"
 }
 
 # Grant the cloud function's invocation service account permissions to launch the function via HTTP
@@ -79,8 +79,8 @@ resource "google_cloudfunctions_function_iam_member" "function_invoker" {
 resource "google_cloud_scheduler_job" "scheduler_job" {
   depends_on = [google_cloudfunctions_function_iam_member.function_invoker]
 
-  name             = "watchdog-scheduler-job"
-  description      = "Regularly scheduled invocation of the Watchdog"
+  name             = "${var.resource_name_prefix}-watchdog-scheduler-job"
+  description      = "Regularly scheduled invocation of the ${var.resource_name_prefix} Watchdog"
   region           = google_cloudfunctions_function.function.region
   schedule         = "*/${var.scheduling_interval} * * * *"
   time_zone        = "Etc/UTC"

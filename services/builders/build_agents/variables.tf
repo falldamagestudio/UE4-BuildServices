@@ -18,3 +18,11 @@ variable "machine_type" {
 variable "boot_disk_size" {
   type = number
 }
+
+variable "instance_name" {
+  type = string
+}
+
+variable "runner_name" {
+  type = string
+}

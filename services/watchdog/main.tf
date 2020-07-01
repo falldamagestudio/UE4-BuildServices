@@ -6,6 +6,8 @@ module "watchdog" {
   source_bucket_name     = var.source_bucket_name
   source_bucket_location = var.source_bucket_location
 
+  resource_name_prefix = var.resource_name_prefix
+
   function_name   = var.function_name
   function_region = var.function_region
 

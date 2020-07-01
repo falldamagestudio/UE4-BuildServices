@@ -1,5 +1,7 @@
 module "build_agent_account" {
   source = "./build_agent_account"
+
+  resource_name_prefix = var.resource_name_prefix
 }
 
 module "build_agent_access_to_storage" {
@@ -18,4 +20,7 @@ module "build_agents" {
 
   github_scope = var.github_scope
   github_pat   = var.github_pat
+
+  instance_name = var.instance_name
+  runner_name = var.runner_name
 }
