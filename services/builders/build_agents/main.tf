@@ -8,4 +8,5 @@ module "build_agent" {
   github_scope = var.github_scope
   github_pat   = var.github_pat
   runner_name  = var.runner_name
+  on_demand    = var.on_demand
 }

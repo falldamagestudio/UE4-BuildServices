@@ -23,4 +23,5 @@ module "build_agents" {
 
   instance_name = var.instance_name
   runner_name = var.runner_name
+  on_demand = var.on_demand
 }

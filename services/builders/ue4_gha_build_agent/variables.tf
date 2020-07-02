@@ -38,3 +38,7 @@ variable "github_pat" {
 variable "runner_name" {
     type = string
 }
+
+variable "on_demand" {
+    type = bool
+}

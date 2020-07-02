@@ -13,5 +13,6 @@ module "ue4_gha_build_agent" {
         github-scope = var.github_scope
         github-pat = var.github_pat
         runner-name = var.runner_name
+        on-demand = var.on_demand
     }
 }

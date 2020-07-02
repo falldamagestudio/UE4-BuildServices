@@ -34,6 +34,10 @@ variable "runner_name" {
   type = string
 }
 
+variable "on_demand" {
+    type = bool
+}
+
 variable "storage_bucket_id" {
   type = string
 }
