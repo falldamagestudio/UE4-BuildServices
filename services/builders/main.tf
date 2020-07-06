@@ -7,7 +7,7 @@ module "build_agent_account" {
 module "build_agent_access_to_storage" {
   source = "./build_agent_access_to_storage"
 
-  storage_bucket_id = var.storage_bucket_id
+  storage_bucket_ids = var.storage_bucket_ids
   build_agent_email = module.build_agent_account.email
 }
 

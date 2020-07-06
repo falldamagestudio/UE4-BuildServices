@@ -38,6 +38,6 @@ variable "on_demand" {
     type = bool
 }
 
-variable "storage_bucket_id" {
-  type = string
+variable "storage_bucket_ids" {
+    type = list(string)
 }
