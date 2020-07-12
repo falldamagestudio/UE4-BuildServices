@@ -41,3 +41,8 @@ variable "on_demand" {
 variable "storage_bucket_ids" {
     type = list(string)
 }
+
+# Module dependencies
+variable "module_depends_on" {
+    type = any
+}

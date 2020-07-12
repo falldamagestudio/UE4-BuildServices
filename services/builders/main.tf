@@ -9,6 +9,9 @@ module "build_agent_access_to_storage" {
 
   storage_bucket_ids = var.storage_bucket_ids
   build_agent_email = module.build_agent_account.email
+
+  # Module dependencies
+  module_depends_on = var.module_depends_on
 }
 
 module "build_agents" {
