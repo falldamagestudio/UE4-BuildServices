@@ -27,4 +27,6 @@ resource "google_compute_instance" "default" {
     email  = var.service_account_email
     scopes = ["cloud-platform"]
   }
+
+  allow_stopping_for_update = true
 }
