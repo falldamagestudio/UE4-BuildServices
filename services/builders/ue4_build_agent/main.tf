@@ -8,8 +8,8 @@ resource "google_compute_instance" "default" {
   boot_disk {
     initialize_params {
       image = var.image
-      type = "pd-ssd"
-      size = var.boot_disk_size
+      type  = "pd-ssd"
+      size  = var.boot_disk_size
     }
   }
 
@@ -24,6 +24,7 @@ resource "google_compute_instance" "default" {
   metadata = var.metadata
 
   service_account {
-    scopes = ["userinfo-email", "compute-ro", "storage-ro"]
+    email  = var.service_account_email
+    scopes = ["cloud-platform"]
   }
 }

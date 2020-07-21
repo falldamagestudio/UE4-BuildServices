@@ -19,6 +19,10 @@ variable "boot_disk_size" {
   type = number
 }
 
+variable "service_account_email" {
+  type = string
+}
+
 variable "instance_name" {
   type = string
 }
@@ -28,5 +32,5 @@ variable "runner_name" {
 }
 
 variable "on_demand" {
-    type = bool
+  type = bool
 }

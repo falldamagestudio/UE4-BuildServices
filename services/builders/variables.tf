@@ -8,7 +8,7 @@ variable "github_scope" {
 
 variable "github_pat" {
   description = "Personal Access Token used to access game's GitHub repository (sensitive)"
-  type = string
+  type        = string
 }
 
 variable "image" {
@@ -35,14 +35,14 @@ variable "runner_name" {
 }
 
 variable "on_demand" {
-    type = bool
+  type = bool
 }
 
 variable "storage_bucket_ids" {
-    type = list(string)
+  type = list(string)
 }
 
 # Module dependencies
 variable "module_depends_on" {
-    type = any
+  type = any
 }
