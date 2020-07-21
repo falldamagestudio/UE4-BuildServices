@@ -14,6 +14,12 @@ module "build_agent_access_to_storage" {
   module_depends_on = var.module_depends_on
 }
 
+module "build_agent_access_to_logging" {
+  source = "./build_agent_access_to_logging"
+
+  build_agent_email  = module.build_agent_account.email
+}
+
 module "build_agents" {
   source = "./build_agents"
 
