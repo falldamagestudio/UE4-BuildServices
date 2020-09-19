@@ -3,5 +3,5 @@ resource "google_storage_bucket" "this" {
   location      = var.location
   force_destroy = true
 
-  bucket_policy_only = true
+  uniform_bucket_level_access = true
 }
