@@ -18,5 +18,5 @@ module "watchdog" {
   github_organization = var.github_organization
   github_repository   = var.github_repository
 
-  scheduling_interval           = var.scheduling_interval
+  scheduling_interval = var.scheduling_interval
 }

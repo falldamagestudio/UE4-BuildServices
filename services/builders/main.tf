@@ -17,7 +17,7 @@ module "build_agent_access_to_storage" {
 module "build_agent_access_to_logging" {
   source = "./build_agent_access_to_logging"
 
-  build_agent_email  = module.build_agent_account.email
+  build_agent_email = module.build_agent_account.email
 }
 
 module "build_agents" {

@@ -10,5 +10,5 @@ variable "name" {
 
 # Module dependencies
 output "module_depends_on_output" {
-    value = google_storage_bucket.this.self_link
+  value = google_storage_bucket.this.self_link
 }

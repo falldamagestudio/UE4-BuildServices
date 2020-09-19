@@ -1,7 +1,7 @@
 variable "support_email" {
-    type = string
+  type = string
 }
 
 variable "application_title" {
-    type = string
+  type = string
 }
