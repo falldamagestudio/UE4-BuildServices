@@ -1,6 +1,7 @@
 locals {
   google_apis = [
     "iam.googleapis.com",
+  "cloudbuild.googleapis.com"
   "cloudfunctions.googleapis.com",
   "cloudscheduler.googleapis.com",
   "compute.googleapis.com",
