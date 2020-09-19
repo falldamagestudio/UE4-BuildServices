@@ -3,6 +3,7 @@ module "build_agent" {
   name                  = var.instance_name
   image                 = var.image
   machine_type          = var.machine_type
+  boot_disk_type        = var.boot_disk_type
   boot_disk_size        = var.boot_disk_size
   service_account_email = var.service_account_email
 

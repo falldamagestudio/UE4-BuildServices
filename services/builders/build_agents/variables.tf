@@ -15,6 +15,10 @@ variable "machine_type" {
   type = string
 }
 
+variable "boot_disk_type" {
+  type = string
+}
+
 variable "boot_disk_size" {
   type = number
 }

@@ -23,6 +23,10 @@ variable "project_id" {
   default = null
 }
 
+variable "boot_disk_type" {
+  type = string
+}
+
 variable "boot_disk_size" {
   type = number
 }

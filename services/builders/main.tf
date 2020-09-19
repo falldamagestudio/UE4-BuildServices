@@ -25,6 +25,7 @@ module "build_agents" {
 
   image          = var.image
   machine_type   = var.machine_type
+  boot_disk_type = var.boot_disk_type
   boot_disk_size = var.boot_disk_size
 
   github_scope = var.github_scope

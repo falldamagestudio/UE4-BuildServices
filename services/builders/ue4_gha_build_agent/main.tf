@@ -6,6 +6,7 @@ module "ue4_gha_build_agent" {
   project_id            = var.project_id
   zone                  = var.zone
   image                 = var.image
+  boot_disk_type        = var.boot_disk_type
   boot_disk_size        = var.boot_disk_size
   machine_type          = var.machine_type
   service_account_email = var.service_account_email

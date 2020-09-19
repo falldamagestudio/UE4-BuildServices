@@ -21,6 +21,11 @@ variable "machine_type" {
   default = "n1-standard-4"
 }
 
+variable "boot_disk_type" {
+  type    = string
+  default = "pd-ssd"
+}
+
 variable "boot_disk_size" {
   type    = number
   default = 200
