@@ -20,5 +20,6 @@ if [[ `gcloud --project=${PROJECT} compute images list --filter=name=${IMAGE_NAM
 
 else
 	cd ${TEMPLATE_FOLDER}
+	packer init ${TEMPLATE_FILENAME}
 	packer build -var-file=${VARIABLE_FILE} -var image_name=${IMAGE_NAME} ${TEMPLATE_FILENAME}
 fi
